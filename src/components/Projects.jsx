@@ -49,7 +49,7 @@ const Projects = () => {
   return (
     <section 
       id="projects" 
-      className="projects-section relative py-20 bg-gray-50"
+      className="projects-section relative py-20 bg-slate-50"
     >
       <div className="container-max-width section-padding">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -70,8 +70,8 @@ const Projects = () => {
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-400/20 to-gray-500/20 flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-slate-100 to-slate-200 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-400/20 to-slate-500/20 flex items-center justify-center">
                   <div className="text-6xl font-bold text-white/30">
                     {String(i + 1).padStart(2, '0')}
                   </div>

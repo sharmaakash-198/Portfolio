@@ -3,7 +3,7 @@ import useScrollFade from '../hooks/useScrollFade'
 
 const Hero = () => {
   const { elementRef, isFading } = useScrollFade(0.5)
-  
+
   const scrollToContact = () => {
     const element = document.getElementById('contact')
     if (element) {
@@ -12,66 +12,90 @@ const Hero = () => {
   }
 
   return (
-    <section 
+    <section
       ref={elementRef}
-      className={`hero-section bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 flex items-center overflow-hidden ${isFading ? 'fading' : ''}`}
+      className={`hero-section bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 flex items-center overflow-hidden relative ${isFading ? 'fading' : ''}`}
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-white rounded-full blur-2xl"></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-white rounded-full blur-2xl"></div>
+      {/* Animated Background Elements */}
+      {/* ✨ Sparkles */}
+      {Array.from({ length: 45 }).map((_, i) => (
+        <span
+          key={i}
+          className={`sparkle ${i % 2 === 0 ? 'sparkle-slow' : 'sparkle-fast'}`}
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`,
+          }}
+        />
+      ))}
+
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-3xl opacity-20 animate-pulse-slow"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-2xl opacity-25 animate-float"></div>
+        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-gradient-to-r from-indigo-400 to-cyan-500 rounded-full blur-3xl opacity-15 animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full blur-2xl opacity-30 animate-float"></div>
+
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-20"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)',
+            backgroundSize: '50px 50px',
+          }}
+        ></div>
       </div>
-      
+
+
       <div className="container-max-width section-padding w-full relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Hi, I'm{' '}
+
+          <div className="animate-fade-in space-y-8">
+
+            {/* Name */}
+            <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold text-white leading-tight">
+              Hi, I'm{" "}
               <span className="text-yellow-300 drop-shadow-lg">
                 Akash Sharma
               </span>
             </h1>
-            
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-8 font-light animate-slide-up">
-              ECE Student & Full-Stack Developer
+
+            {/* Role - premium gradient */}
+            <h2 className="text-xl md:text-3xl font-semibold bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">
+              Full-Stack Developer • AI Enthusiast • Problem Solver
             </h2>
-            
-            <p className="text-lg md:text-xl text-blue-100/90 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-              Final year Electronics & Communication Engineering student at NIT Kurukshetra with expertise in 
-              AI, Data Structures & Algorithms, and Web/Software development. Passionate about building 
-              scalable applications and solving complex problems through innovative technology solutions.
+
+            {/* Tagline */}
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Building scalable web applications and intelligent software solutions.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-4">
+
               <button
                 onClick={scrollToContact}
-                className="bg-white text-primary-700 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105 border-2 border-transparent hover:border-white/20"
+                className="bg-white text-slate-900 font-semibold py-3 px-8 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg"
               >
-                Get In Touch
+                Contact Me
               </button>
-              
+
               <button
-                onClick={(e) => {
-                  e.preventDefault()
+                onClick={() =>
                   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                className="bg-transparent text-white hover:bg-white/10 font-medium py-3 px-8 rounded-lg border-2 border-white/30 hover:border-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                }
+                className="border border-white/40 text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-all duration-300"
               >
-                View My Work
+                View Projects
               </button>
+
             </div>
-          </div>
-          
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-            </div>
+
           </div>
         </div>
       </div>
+
+
     </section>
   )
 }

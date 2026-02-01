@@ -2,8 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section 
-      id="about" 
+    <section
+      id="about"
       className="about-section relative py-20 bg-white"
     >
       <div className="container-max-width section-padding">
@@ -11,9 +11,9 @@ const About = () => {
           {/* Image Side */}
           <div className="order-2 lg:order-1 animate-slide-in-left">
             <div className="relative">
-              <div className="aspect-[2/3] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="aspect-[2/3] bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl overflow-hidden shadow-xl">
                 {/* Profile Image */}
-                <img 
+                <img
                   src="/akash-photo.jpg"
                   alt="Akash Sharma - ECE Student & Full-Stack Developer"
                   className="w-full h-full object-cover object-top"
@@ -24,18 +24,18 @@ const About = () => {
                   }}
                 />
                 {/* Fallback placeholder */}
-                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style={{display: 'none'}}>
+                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style={{ display: 'none' }}>
                   <div className="w-32 h-32 bg-gray-400 rounded-full flex items-center justify-center">
                     <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                     </svg>
                   </div>
                 </div>
               </div>
-              
+
               {/* Decorative elements */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-gray-200 rounded-full opacity-20"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gray-200 rounded-full opacity-20"></div>
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-slate-200 rounded-full opacity-30"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-slate-200 rounded-full opacity-30"></div>
             </div>
           </div>
 
@@ -45,26 +45,26 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 About Me
               </h2>
-              
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+
+              <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
+
                 <p>
-                  I'm a passionate Electronics & Communication Engineering student at NIT Kurukshetra 
-                  with strong expertise in AI, Data Structures & Algorithms, and Web/Software development. 
-                  I'm experienced in designing scalable applications and AI-powered solutions.
+                  I'm a Full-Stack Developer who enjoys building clean, scalable web applications and turning ideas
+                  into reliable digital products. I focus on writing simple, maintainable code and delivering smooth user experiences.
                 </p>
-                
+
                 <p>
-                  Throughout my academic journey, I've developed projects like AI Recipe Generator and 
-                  AI Finance Manager, showcasing my ability to leverage cutting-edge technologies 
-                  like React, Node.js, Python, and various AI frameworks to solve real-world problems.
+                  I work primarily with React, JavaScript, Node.js, Express, MongoDB, and SQL — developing complete
+                  end-to-end systems from frontend interfaces to backend APIs and databases.
                 </p>
-                
+
                 <p>
-                  Currently pursuing my final year at one of India's premier technical institutes, 
-                  I'm focused on building innovative solutions that bridge the gap between 
-                  electronics engineering and modern software development.
+                  Currently in my final year at NIT Kurukshetra, I’ve built strong foundations in Data Structures,
+                  Algorithms, and system design, and I’m continuously improving my skills through real-world development.
                 </p>
+
               </div>
+
 
               {/* Skills */}
               <div className="mt-8">
@@ -73,8 +73,8 @@ const About = () => {
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    'C++', 'Python', 'JavaScript', 'React', 
-                    'Node.js', 'HTML', 'CSS', 'SQL', 
+                    'C++', 'Python', 'JavaScript', 'React',
+                    'Node.js', 'Express.js', 'HTML', 'CSS', 'Tailwind', 'SQL', 'MongoDB',
                     'Git', 'Data Structures', 'Algorithms', 'AI/ML'
                   ].map((skill) => (
                     <span

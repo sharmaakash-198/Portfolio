@@ -6,8 +6,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = window.innerHeight * 0.8 // Trigger when 80% of viewport is scrolled
-      setIsScrolled(window.scrollY > heroHeight)
+      // Change header color immediately after scrolling even slightly
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -48,7 +48,7 @@ const Header = () => {
               isScrolled ? 'text-secondary-900' : 'text-white'
             }`}
           >
-            Akash Sharma
+            AS
           </button>
 
           {/* Desktop Navigation */}
