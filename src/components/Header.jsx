@@ -7,11 +7,13 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Change header color immediately after scrolling even slightly
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 60)
     }
 
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   const toggleMenu = () => {
@@ -32,21 +34,19 @@ const Header = () => {
   }
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-secondary-100' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-secondary-100'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="container-max-width section-padding">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <button
             onClick={scrollToTop}
-            className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-secondary-900' : 'text-white'
-            }`}
+            className={`text-2xl font-bold transition-colors duration-300 ${isScrolled ? 'text-secondary-900' : 'text-white'
+              }`}
           >
             AS
           </button>
@@ -55,31 +55,28 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <button
               onClick={() => scrollToSection('about')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-secondary-600 hover:text-primary-600' 
+              className={`transition-colors duration-300 font-medium ${isScrolled
+                  ? 'text-secondary-600 hover:text-primary-600'
                   : 'text-white/90 hover:text-white'
-              }`}
+                }`}
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-secondary-600 hover:text-primary-600' 
+              className={`transition-colors duration-300 font-medium ${isScrolled
+                  ? 'text-secondary-600 hover:text-primary-600'
                   : 'text-white/90 hover:text-white'
-              }`}
+                }`}
             >
               Work
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-secondary-600 hover:text-primary-600' 
+              className={`transition-colors duration-300 font-medium ${isScrolled
+                  ? 'text-secondary-600 hover:text-primary-600'
                   : 'text-white/90 hover:text-white'
-              }`}
+                }`}
             >
               Contact
             </button>
@@ -88,11 +85,10 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className={`md:hidden p-2 transition-colors duration-300 ${
-              isScrolled 
-                ? 'text-secondary-600 hover:text-primary-600' 
+            className={`md:hidden p-2 transition-colors duration-300 ${isScrolled
+                ? 'text-secondary-600 hover:text-primary-600'
                 : 'text-white/90 hover:text-white'
-            }`}
+              }`}
           >
             <svg
               className="w-6 h-6"
@@ -121,37 +117,33 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className={`md:hidden py-4 transition-colors duration-300 ${
-            isScrolled ? 'border-t border-secondary-100' : 'border-t border-white/20'
-          }`}>
+          <nav className={`md:hidden py-4 transition-colors duration-300 ${isScrolled ? 'border-t border-secondary-100' : 'border-t border-white/20'
+            }`}>
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection('about')}
-                className={`text-left transition-colors duration-300 font-medium ${
-                  isScrolled 
-                    ? 'text-secondary-600 hover:text-primary-600' 
+                className={`text-left transition-colors duration-300 font-medium ${isScrolled
+                    ? 'text-secondary-600 hover:text-primary-600'
                     : 'text-white/90 hover:text-white'
-                }`}
+                  }`}
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className={`text-left transition-colors duration-300 font-medium ${
-                  isScrolled 
-                    ? 'text-secondary-600 hover:text-primary-600' 
+                className={`text-left transition-colors duration-300 font-medium ${isScrolled
+                    ? 'text-secondary-600 hover:text-primary-600'
                     : 'text-white/90 hover:text-white'
-                }`}
+                  }`}
               >
                 Work
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className={`text-left transition-colors duration-300 font-medium ${
-                  isScrolled 
-                    ? 'text-secondary-600 hover:text-primary-600' 
+                className={`text-left transition-colors duration-300 font-medium ${isScrolled
+                    ? 'text-secondary-600 hover:text-primary-600'
                     : 'text-white/90 hover:text-white'
-                }`}
+                  }`}
               >
                 Contact
               </button>
@@ -163,4 +155,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
