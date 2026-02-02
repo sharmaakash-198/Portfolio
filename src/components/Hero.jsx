@@ -11,6 +11,13 @@ const Hero = () => {
     }
   }
 
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects') 
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section
       ref={elementRef}
@@ -60,7 +67,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            {/* Role - premium gradient */}
+            {/* Role - gradient */}
             <h2 className="text-xl md:text-3xl font-semibold bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">
               Full-Stack Developer • AI Enthusiast • Problem Solver
             </h2>
@@ -81,9 +88,7 @@ const Hero = () => {
               </button>
 
               <button
-                onClick={() =>
-                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
-                }
+                onClick={scrollToProjects}
                 className="border border-white/40 text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 View Projects
