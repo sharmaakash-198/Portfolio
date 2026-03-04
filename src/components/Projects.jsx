@@ -6,42 +6,42 @@ const Projects = () => {
       title: 'AI Finance Manager',
       description: 'Built an AI-powered personal finance management application using React, Node.js, and Prisma. Features personalized spending insights, budget tracking, and intelligent financial recommendations with secure user authentication.',
       tags: ['React', 'Node.js', 'Prisma', 'PostgreSQL'],
-      link: '#',
+      link: 'https://github.com/sharmaakash-198/ai_finance_manager',
       category: 'AI Development'
     },
     {
-      title: 'AI Recipe Generator',
-      description: 'Developed an AI-powered recipe generation app using Cohave AI for natural language understanding. Built with React frontend and integrated responsive design for optimal user experience across devices.',
-      tags: ['React', 'Cohave AI', 'JavaScript', 'CSS'],
-      link: '#',
-      category: 'AI Development'
-    },
-    {
-      title: 'Web Development Frontend',
-      description: 'Collaborated with web development teams to design and develop responsive web applications. Implemented interactive user interfaces and optimized performance for enhanced user experiences.',
-      tags: ['HTML', 'CSS', 'JavaScript', 'React'],
-      link: '#',
+      title: 'Realtime Chat App',
+      description: 'Built a real-time MERN chat application using Socket.IO for instant messaging and JWT-based authentication to enable secure user login and private conversations.',
+      tags: ['Express.js', 'JavaScript', 'React', 'MongoDB', 'Socket.IO'],
+      link: 'https://github.com/sharmaakash-198/MERN-Chat-App',
       category: 'Web Development'
     },
     {
-      title: 'Data Structures & Algorithms',
-      description: 'Extensive practice and implementation of core computer science concepts including arrays, linked lists, trees, graphs, sorting algorithms, and dynamic programming solutions.',
+      title: 'Deep Packet Analyzer',
+      description: 'Deep Packet Inspection (DPI) engine that parses PCAP files, classifies traffic by application (YouTube, TikTok, Facebook, etc.), extracts HTTPS SNI, applies blocking rules, and writes a filtered PCAP output. Includes both simple and multi‑threaded implementations in modern C++17.',
       tags: ['C++', 'Python', 'Algorithms', 'Problem Solving'],
-      link: '#',
-      category: 'Programming'
+      link: 'https://github.com/sharmaakash-198/DataPacket-Analyzer',
+      category: 'Computer Networks'
     },
     {
-      title: 'Database Management Systems',
-      description: 'Designed and implemented relational database systems with focus on efficient data storage, retrieval, and management. Experience with SQL queries and database optimization.',
-      tags: ['SQL', 'Database Design', 'MySQL', 'PostgreSQL'],
-      link: '#',
-      category: 'Database'
+      title: 'AI Recipe Generator',
+      description: 'Developed an AI-powered recipe generation app using Cohere AI for natural language understanding. Built with React frontend and integrated responsive design for optimal user experience across devices.',
+      tags: ['React', 'Cohere AI', 'JavaScript', 'CSS'],
+      link: 'https://github.com/sharmaakash-198/AI-Recipe-Generator-Application',
+      category: 'AI Development'
     },
     {
-      title: 'Academic Projects',
-      description: 'Various academic projects during ECE curriculum including circuit design, signal processing, and embedded systems. Achieved 98.54 percentile in JEE Mains 2022.',
-      tags: ['Electronics', 'Circuit Design', 'Signal Processing'],
-      link: '#',
+      title: 'E-commerce Data Analysis',
+      description: 'End-to-end SQL data analysis project on e-commerce inventory data, focusing on data cleaning, exploratory analysis, and business-driven insights using PostgreSQL.',
+      tags: ['Python', 'Database Design', 'Numpy', 'Pandas', 'MatplotLib', 'PostgreSQL'],
+      link: 'https://github.com/sharmaakash-198/Zepto-E-commerce-SQL-Data-Analysis-Project',
+      category: 'Data Exploration & Analysis'
+    },
+    {
+      title: '4-bit Ripple Carry Adder Simulation',
+      description: 'This is a Verilog HDL project to design and simulate a 4-bit Ripple Carry Adder using Xilinx Vivado 2023.2. The design includes RTL, gate-level logic, waveform analysis, and testbench validation.',
+      tags: ['Electronics', 'Digital Design', 'RTL'],
+      link: 'https://github.com/sharmaakash-198/4-Bit-Ripple-Carry-Adder',
       category: 'Electronics'
     }
   ];
