@@ -73,9 +73,9 @@ const About = () => {
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    'C++', 'Python', 'JavaScript', 'React',
-                    'Node.js', 'Express.js', 'HTML', 'CSS', 'Tailwind', 'SQL', 'MongoDB',
-                    'Git', 'Data Structures', 'Algorithms', 'AI/ML'
+                    'C++', 'Python', 'JavaScript', 'TypeScript','React', 'Next.js', 
+                    'Node.js', 'Express.js', 'HTML', 'CSS', 'Tailwind', 'MYSQL', 'MongoDB', 'PostgreSQL',
+                    'Git', 'Data Structures & Algorithms', 'AI/ML', 'Docker', 'Postman'
                   ].map((skill) => (
                     <span
                       key={skill}
