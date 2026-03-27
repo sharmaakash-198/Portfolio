@@ -130,4 +130,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ using React & Tailwind CSS**
+**Built with  ❤️  using React & Tailwind CSS**
