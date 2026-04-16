@@ -45,10 +45,10 @@ const Header = () => {
           {/* Logo */}
           <button
             onClick={scrollToTop}
-            className={`text-2xl font-bold transition-colors duration-300 ${isScrolled ? 'text-secondary-900' : 'text-white'
+            className={`text-2xl font-bold transition-colors duration-300 flex items-center justify-center ${isScrolled ? 'text-secondary-900' : 'text-white'
               }`}
           >
-            AS
+            <img src="/icon.svg" alt="Logo" className="w-20 h-20" />
           </button>
 
           {/* Desktop Navigation */}
